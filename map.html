@@ -170,7 +170,11 @@ function initialize() {
       
     }, function() {
       handleNoGeolocation(true);
-    });
+    }, {
+                    enableHighAccuracy: false,
+                    timeout: 10000,
+                    maximumAge: 10000
+                });
   } else {
     // Browser doesn't support Geolocation
     handleNoGeolocation(false);
